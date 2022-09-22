@@ -1,0 +1,2 @@
+hello.py:: unused function 'say_goodbye' (% confidence)
+hello.py:: unused function 'test_addition' (% confidence)
