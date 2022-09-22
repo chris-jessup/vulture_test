@@ -9,6 +9,9 @@ def say_goodbye():
 def test_addition():
     assert 1 + 1 == 2
 
+def say_hi():
+    print("HI")
+
 if __name__ == '__main__':
     say_hello()
 
