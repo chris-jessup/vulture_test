@@ -1,0 +1,30 @@
+---
+name: "Check Dead Code"
+
+on:
+  pull_request:
+    paths:
+      - "**"
+    branches:
+      - master
+
+jobs:
+  dead_code:
+    name: Dead Code Check
+    runs-on: [default]
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.8
+
+      - name: Run dead code checks
+        run: |
+          pip install vulture
+          vulture ./ hello.py | sort | tr -d '1234567890' > .vulture_output
+          git diff --exit-code .vulture_output
