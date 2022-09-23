@@ -11,7 +11,7 @@ on:
 jobs:
   dead_code:
     name: Dead Code Check
-    runs-on: [default]
+    runs-on: ubuntu-latest 
     timeout-minutes: 5
 
     steps:
