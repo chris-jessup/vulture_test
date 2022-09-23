@@ -1,2 +1,2 @@
-hello.py:6: unused function 'say_goodbye' (60% confidence)
-hello.py:9: unused function 'test_addition' (60% confidence)
+hello.py:: unused function 'say_goodbye' (% confidence)
+hello.py:: unused function 'test_addition' (% confidence)
